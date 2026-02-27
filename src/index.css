@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+html.dark {
+  background-color: #111827;
+}
+
+/* About */
+.about-img {
+  transition: transform 0.5s ease;
+}
+
+.about-img:hover {
+  transform: scale(1.05);
+}
+/* Stats */
+.stat-card {
+  transition: all 0.4s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Dégradés personnalisés */
+
+.bg-gradient-primary {
+  background: linear-gradient(45deg, #0d6efd, #0056b3);
+}
+
+.bg-gradient-success {
+  background: linear-gradient(45deg, #198754, #0f5132);
+}
+
+.bg-gradient-warning {
+  background: linear-gradient(45deg, #ffc107, #cc9a06);
+}
+
+.bg-gradient-danger {
+  background: linear-gradient(45deg, #dc3545, #8b1e2b);
+}
+
+/* Certifications */
+.cert-hero {
+  height: 50vh;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+              url("/images/certifications.jpg") center/cover no-repeat;
+}
+
+.cert-card {
+  transition: all 0.4s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* TIMELINE */
+
+.timeline {
+  list-style: none;
+  padding: 0;
+  position: relative;
+}
+
+.timeline li {
+  padding: 20px;
+  border-left: 3px solid #0d6efd;
+  margin-bottom: 20px;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.timeline li span {
+  font-weight: bold;
+  color: #0d6efd;
+}
+
+/* Hero */
+/* Carousel Hero */
+.hero-slide h1,
+.hero-slide p,
+.hero-slide button {
+  text-shadow: 0 4px 15px rgba(0,0,0,0.6);
+}
+
+/* Fade In Up Animation */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in-up {
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeOutDown {
+  0% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(40px); }
+}
+
+.fade-out-down {
+  animation: fadeOutDown 0.5s ease forwards;
+}
+
+/* Centrage vertical et parallax léger */
+.hero-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-attachment: fixed; /* effet parallax léger */
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+/* Service */
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s ease;
+}
+
+.service-card img {
+  height: 200px;
+  object-fit: cover;
+}
