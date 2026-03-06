@@ -4,7 +4,7 @@ html.dark {
   background-color: #111827;
 }
 
-/* About */
+/******************************** About CSS *****************************/
 .about-img {
   transition: transform 0.5s ease;
 }
@@ -12,7 +12,7 @@ html.dark {
 .about-img:hover {
   transform: scale(1.05);
 }
-/* Stats */
+/********************************* Stats CSS *****************************/
 .stat-card {
   transition: all 0.4s ease;
 }
@@ -40,11 +40,11 @@ html.dark {
   background: linear-gradient(45deg, #dc3545, #8b1e2b);
 }
 
-/* Certifications */
+/*************************************** Certifications CSS ***************************/
 .cert-hero {
   height: 50vh;
   background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-              url("/images/certifications.jpg") center/cover no-repeat;
+  url("equipe.jpg") center/cover no-repeat;
 }
 
 .cert-card {
@@ -77,7 +77,7 @@ html.dark {
   color: #0d6efd;
 }
 
-/* Hero */
+/********************************* Hero CSS *******************************/
 /* Carousel Hero */
 .hero-slide h1,
 .hero-slide p,
@@ -115,7 +115,8 @@ html.dark {
   background-position: center;
   text-align: center;
 }
-/* Service */
+
+/******************************* Service CSS *********************************/
 .service-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
@@ -125,4 +126,260 @@ html.dark {
 .service-card img {
   height: 200px;
   object-fit: cover;
+}
+
+/***************************** Header CSS ************************************/
+/* On ajuste la hauteur si le navbar est plus haute */
+body {
+  padding-top: 10px; /* équivalent à la hauteur du navbar */
+}
+/* Navbar base */
+.navbar-custom {
+  transition: all 0.3s ease;
+  background: rgba(0, 0, 0, 0.85); /*semi-transparent*/
+  padding: 15px 0;
+}
+.navbar-scrolled {
+  background-color: rgba(0,0,0,1); /* couleur pleine après scroll */
+}
+
+.navbar-custom .nav-link {
+  color: white !important;
+  margin-left: 15px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Effet actif */
+.active-link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #0d6efd;
+  bottom: -5px;
+  left: 0;
+}
+
+/* Au scroll */
+.navbar-scrolled {
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(10px);
+  padding: 10px 0;
+}
+
+/* Scroll fluide */
+html {
+  scroll-behavior: smooth;
+}
+
+/************************************ Contact CSS **************************************/
+.contact-card {
+  transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+}
+
+.social-icons a {
+  font-size: 22px;
+  margin-right: 15px;
+  color: #0d6efd;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #000;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 250px;
+}
+
+/* Animation scroll */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in-up {
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* WhatsApp floating */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #25d366;
+  color: white;
+  font-size: 28px;
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  z-index: 999;
+  transition: 0.3s;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+/* About Section CSS */
+.about-section {
+  background: linear-gradient(to right, #f8f9fa, #ffffff);
+}
+
+.section-title {
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: #0d6efd;
+  display: block;
+  margin-top: 8px;
+  border-radius: 2px;
+}
+
+.extra-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.5s ease;
+}
+
+.extra-content.show {
+  max-height: 500px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.premium-btn {
+  background: #0d6efd;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.premium-btn:hover {
+  background: #084298;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.about-img {
+  transition: transform 0.4s ease;
+}
+
+.about-img:hover {
+  transform: scale(1.05);
+}
+
+/***************************************** Partenaires CSS *******************************/
+.partenaires-section {
+  padding: 80px 0;
+  background: #ffffff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.partenaires-title {
+  font-weight: 700;
+  margin-bottom: 60px;
+  font-size: 2rem;
+  position: relative;
+}
+
+.partenaires-title::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #0d6efd;
+  display: block;
+  margin: 15px auto 0;
+  border-radius: 2px;
+}
+
+/* Slider container */
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Gradient effect (fade on sides) */
+.slider::before,
+.slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  z-index: 2;
+}
+
+.slider::before {
+  left: 0;
+  background: linear-gradient(to right, #ffffff 0%, transparent 100%);
+}
+
+.slider::after {
+  right: 0;
+  background: linear-gradient(to left, #ffffff 0%, transparent 100%);
+}
+
+/* Track */
+.slide-track {
+  display: flex;
+  width: fit-content;
+  animation: scroll 30s linear infinite;
+}
+
+/* Pause au hover */
+.slider:hover .slide-track {
+  animation-play-state: paused;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  height: 120px;
+  margin: 0 30px;
+  transition: transform 0.4s ease;
+}
+
+.logo-container img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.4s ease;
+}
+
+.logo-container:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
