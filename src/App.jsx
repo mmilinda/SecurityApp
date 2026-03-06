@@ -57,9 +57,9 @@ function Landing() {
           <Team />
           <Testimonials />
           <Partenaires />
-        <section id="contact">
-            <Contact />
-        </section>
+        {/* <section id="contact">
+            <Newsletter />
+        </section> */}
       </div>
     </>
   );

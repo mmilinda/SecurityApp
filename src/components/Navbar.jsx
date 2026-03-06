@@ -236,9 +236,9 @@ const NavbarMain = () => {
           <Navbar.Toggle aria-controls="navbar-nav" />
           <Navbar.Collapse id="navbar-nav">
             <Nav className="ms-auto align-items-lg-center">
-              <Nav.Link as={Link} to="/">Accueil</Nav.Link>
               <Nav.Link as={Link} to="/about">À propos</Nav.Link>
               <Nav.Link as={Link} to="/services">Services</Nav.Link>
+              <Nav.Link as={Link} to="/blog">Blog</Nav.Link>
               <Nav.Link as={Link} to="/certifications">Certifications</Nav.Link>
               <Nav.Link as={Link} to="/references">Références</Nav.Link>
               <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
